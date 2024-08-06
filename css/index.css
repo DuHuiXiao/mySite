@@ -334,7 +334,8 @@ li.active >  button {
     height: 13em;
     overflow: visible;
     /* background-color: rgb(197,165,98); */
-    background-color: #8ac8a0;
+    background: linear-gradient(-90deg,rgb(128, 128, 128),rgb(11, 11, 11));
+    border: 1px solid #fff;
     box-shadow: -3px 3px 9px 1px rgb(128, 128, 128);
     border-radius: 0.5em;
     transition: 0.3s;
@@ -353,6 +354,10 @@ li.active >  button {
     cursor: pointer;
     transition: 0.3s;
   }
+  .record-above .record-photo {
+    width: 100%;
+    height: 100%;
+  }
   /* 下层的盒子hover */
   .record-below:hover {
     width: 18em;
@@ -362,7 +367,7 @@ li.active >  button {
   .record-below:hover > .record-above {
     top: 1em;
     left: 1em;
-    box-shadow: none;
+    box-shadow: 0 0 9px 1px rgba(255, 255, 255, 0.237);
   }
   /* above底下有个盒子，放图标和文字、作者的 */
   div.record-below > div.record-describe {
@@ -386,13 +391,19 @@ li.active >  button {
     width: 3em;
     height: 3em;
     margin-left: 1em;
-    background-image: url(https://s2.loli.net/2024/08/01/QJr37fTce5EPzIy.jpg);
     background-color: #ffffff;
-    box-shadow: -3px 2px 5px 0.5px rgba(128, 128, 128, 0.626);
+    box-shadow: -2px 2px 5px 0.5px rgba(128, 128, 128, 0.626);
     border-radius: 0.3em;
+    transition: 0.2s;
+  }
+  .head-icon > .record-photo {
+    width: 100%;
+    height: 100%;
+    background-image: url(https://s2.loli.net/2024/08/01/QJr37fTce5EPzIy.jpg);
+    border-radius: 0.2em;
   }
   .record-below:hover > .record-describe > .head-icon {
-    box-shadow: none;
+    box-shadow: -1px 1px 5px 0.5px rgba(255, 255, 255, 0.178);;
   }
   .record-describe > .title-authod {
     position: relative;
