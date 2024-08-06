@@ -2,7 +2,7 @@
 displayData = [
   {
     task: 'javascript',
-    url: 'https://radicalhub.com/wp-content/uploads/2018/07/javascript.jpg',
+    url: 'https://ooo.0x0.ooo/2024/08/06/OtT0lX.jpg',
     href: 'https://www.bilibili.com/video/BV1Y84y1L7Nn/?spm_id_from=333.337.search-card.all.click'
   },
   {
