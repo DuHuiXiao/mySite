@@ -1,0 +1,521 @@
+/* #region 根和公共元素 */
+html {
+  height: 100%;
+}
+.root {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-top: 80px;
+  font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+  background-color: rgb(255, 255, 255,0);
+}
+/* 背景 */
+div.background {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-image: url(https://img2.wallspic.com/crops/0/4/8/4/3/134840/134840-de_ping_xian-huang_hun-ri_luo-yang_guang-ji_yun-3840x2160.jpg);
+  background-size: cover;
+}
+h2 {
+  margin:  10px auto;
+  text-align: center;
+}
+hr {
+  width: 850px;
+  height: 3px;
+  margin: auto;
+}
+/* #endregion 根和公共元素 */
+
+/* #region 一些固定样式 */
+/* 背景大小自适应 */
+.background-fit {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* 粗体 */
+.bold {
+  font-weight: bold;
+}
+/* 文本溢出自动省略 */
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* #endregion 一些固定样式 */
+
+/* #region------------------头部---------------------------------- */
+header.header {
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  height: 3em;
+  margin: 0 auto;
+  background-color: #6bd262;
+  box-shadow: 0 2px 2px 1px rgb(206, 206, 206);
+}
+/* 头部的版心内容 */
+.header > div.header-content {
+  width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+  line-height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
+.header-content > .left {
+  margin-left: 20px;
+  line-height: 80px;
+
+}
+.header-content > .middle {
+  font-size: 35px;
+  font-weight: bold;
+  
+}
+.header-content > .right {
+  margin-right: 20px;
+  line-height: 80px;
+}
+.header-content > .left > .profile-photo {
+  width: 2.6em;
+  height: 2.6em;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-image: url("https://s2.loli.net/2024/08/01/QJr37fTce5EPzIy.jpg");
+  background-size: cover;
+}
+/* #endregion */
+
+
+
+/* #region----------内容部分------------------------ */
+.root > div.main-content {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  background-color: #ebfffa;
+}
+/* #region上方的导航部分 */
+.main-content > .top-nav {
+  width: 1000px;
+  margin-top: 25px;
+  height: 110px;
+  user-select: none;
+  background-color: rgba(195, 195, 193, 0);
+}
+.top-nav-list {
+  display: flex;
+  height: 110px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.top-nav-list > li {
+  border-radius: 10px;
+  position: relative;
+  width: 22%;
+  height: 100px;
+  background-color: #000000;
+  box-shadow: -3px 3px 9px 1px rgb(128, 128, 128);
+  transform-style: preserve-3d;
+  transition: 0.2s;
+}
+.top-nav-list > li > a {
+  z-index: 1;
+  display: block;
+  height: 100%;
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 100px;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.top-nav-list > li:hover {
+  width: 23%;
+  height: 102px;
+  background-color: rgba(170, 217, 41, 0.961);
+}
+
+.top-nav-list > li:hover > a {
+  width: 100%;
+  height: 102px;
+  font-size: 30px;
+  color: #000000;
+}
+/* #endregion上方的导航部分 */
+
+/* #region轮播图 */
+.carousel-container {
+  width: 850px;
+  height: 400px;
+  position: relative;
+  margin: 35px auto 60px;
+  user-select: none;
+  background-color: rgb(159, 84, 84);
+  box-shadow: -3px 3px 9px 1px rgb(128, 128, 128);
+}
+.carousel-container span.img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #fff0;
+  transition: 0.5s;
+  cursor: pointer;
+}
+/* #region左右按钮 */
+.carousel-container > .carousel-prev,
+ .carousel-container > .carousel-next {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  margin-top: -25px;
+  border-radius: 50%;
+}
+.carousel-container > .carousel-prev {
+  left: 25px;
+}
+.carousel-container > .carousel-next {
+  right: 25px;
+}
+.carousel-prev > .carousel-prev-btn,.carousel-next > .carousel-next-btn {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0);
+  opacity: 0.5;
+  cursor: pointer;
+}
+.carousel-prev > .carousel-prev-btn {
+  background-image: url('../src/svg/carousel-left.svg');
+}
+.carousel-next > .carousel-next-btn {
+  background-image: url('../src/svg/carousel-right.svg');
+}
+
+.carousel-prev > .carousel-prev-btn:hover,
+ .carousel-next > .carousel-next-btn:hover {
+  opacity: 1;
+  color: #fff;
+}
+/* #endregion左右按钮 */
+
+/* #region 轮播图下方位置显示 */
+.carousel-container > .carousel-position {
+  position: absolute;
+  width: 600px;
+  height: 50px;
+  bottom: 0;
+  left: 50%;
+  margin-left: -300px;
+  text-align: center;
+  padding-top: 15px;
+}
+.carousel-position > .carousel-ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.carousel-ul > li > button {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  width: 100px;
+  height: 5px;
+  overflow: hidden;
+  background-color: #ffffff30;
+  transition: all 1s,height 0.2s;
+  box-shadow: 2px 2px 10px -1px black;
+}
+.carousel-ul > li > button > label {
+  position: absolute;
+  top: 10%;
+  left: 2%;
+  width: 96%;
+  height: 80%;
+  background-color: #ffffff;
+  opacity: 0;
+  transition: 1s;
+  cursor: pointer;
+  z-index: 2;
+}
+.carousel-container:hover .carousel-ul > li > button {
+  height: 20px;
+}
+.carousel-ul > li > button::before {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgb(255, 255, 255);
+  transition: 0.2s;
+}
+.carousel-ul > li > button::after {
+  position: absolute;
+  bottom: -100%;
+  right: -100%;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  transition: 0.2s;
+}
+/* .carousel-ul > li > button:hover > label, li.active > button > label {
+  opacity: 1;
+} */
+li.active >  button {
+  background-color: #fff;
+}
+.carousel-ul > li > button:hover::before,li.active > button::before {
+  top: 0;
+  left: -50%;
+}
+.carousel-ul > li > button:hover::after,li.active > button::after {
+  bottom: 0;
+  right: -50%;
+}
+/* #endregion 轮播图下方位置显示 */
+
+/* #endregion */
+
+/* #region展示(display) */
+  div.display {
+    margin: 20px auto;
+    width: 800px;
+    height: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .display > div {
+    width: 30%;
+    height: 135px;
+    box-shadow: -1px 2px 9px 1px rgba(128, 128, 128, 0.694);
+    border-radius: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+/* #endregion展示(display) */
+
+/* #region文字内容（博客、记录等） */
+  .record-set {
+    width: 100%;
+    height: 9999px;
+    overflow: hidden;
+  }
+  .record-set > .record-container {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 80%;
+  }
+  /* 下层的盒子放标题 */
+  .record-container > .record-below {
+    margin: 6em auto;
+    position: relative;
+    width: 16em;
+    height: 13em;
+    overflow: visible;
+    /* background-color: rgb(197,165,98); */
+    background-color: #8ac8a0;
+    box-shadow: -3px 3px 9px 1px rgb(128, 128, 128);
+    border-radius: 0.5em;
+    transition: 0.3s;
+  }
+  /* <!-- 上层的盒子（放img） --> */
+  .record-below > .record-above {
+    position: absolute;
+    width: 16em;
+    height: 9em;
+    top: -1em;
+    left: -1em;
+    background-image: url(https://tse4-mm.cn.bing.net/th/id/OIP-C.hWmSq58BQbvpm7J8-ymNPAAAAA?rs=1&pid=ImgDetMain);
+    background-color: rgb(255, 166, 0);
+    box-shadow: -3px 3px 9px 1px rgb(128, 128, 128);
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  /* 下层的盒子hover */
+  .record-below:hover {
+    width: 18em;
+    height: 17em;
+    transform: translate(-2em,-4em);
+  }
+  .record-below:hover > .record-above {
+    top: 1em;
+    left: 1em;
+    box-shadow: none;
+  }
+  /* above底下有个盒子，放图标和文字、作者的 */
+  div.record-below > div.record-describe {
+    position: absolute;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    left: -2em;
+    top: 8.5em;
+    width: 17em;
+    height: 3.8em;
+    transition: 0.3s;
+  }
+  div.record-below:hover > div.record-describe {
+    transform: translate(-1em,0);
+  }
+  /* #region 图标和文字、作者 */
+  .record-describe > .head-icon {
+    width: 3em;
+    height: 3em;
+    margin-left: 1em;
+    background-image: url(https://s2.loli.net/2024/08/01/QJr37fTce5EPzIy.jpg);
+    background-color: #ffffff;
+    box-shadow: -3px 2px 5px 0.5px rgba(128, 128, 128, 0.626);
+    border-radius: 0.3em;
+  }
+  .record-below:hover > .record-describe > .head-icon {
+    box-shadow: none;
+  }
+  .record-describe > .title-authod {
+    position: relative;
+    height: 3em;
+    width: 12.5em;
+  }
+  .title-authod > .record-title {
+    position: absolute;
+    top: 0.3em;
+    left: 0;
+    width: 100%;
+    font-size: 1.0em;
+  }
+  .title-authod > .record-authod {
+    position: absolute;
+    bottom: 0;
+    left: 0.2em;
+    width: 100%;
+    font-size: 0.8em;
+  }
+  .record-below:hover > div.record-describe {
+    left: 1em;
+    top: 10em;
+  }
+  /* #endregion 图标和文字、作者 */
+  
+  /* #region 最下面有个盒子，隐藏的，放的是点赞评论等小控件 */
+  .record-below > div.record-icons {
+    position: absolute;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 16em;
+    height: 2em;
+    bottom: -1em;
+    left: -1em;
+    opacity: 0;
+    transition: 0.3s;
+  }
+  .record-below:hover > div.record-icons {
+    bottom: 1em;
+    left: 1em;
+    opacity: 1;
+  }
+  .record-icons > .record-info {
+    height: 1.6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(86, 86, 86);
+    border-radius: 0.2em;
+    margin-right: 0.7em;
+    margin-bottom: 1em;
+    transition: 0.3s;
+  }
+  .record-icons > .record-info:hover {
+    background-color: rgb(121, 121, 121);
+  }
+  .record-info > .record-info-icon {
+    color: rgb(245, 245, 245);
+    width: 1em;
+    height: 1em;
+    margin-right: 0.35em;
+    margin-left: 0.35em;
+  }
+  .record-info > .record-info-count {
+    color: rgb(245, 245, 245);
+    margin-right: 0.35em;
+  }
+  .record-below:hover .record-icons > .record-info {
+    margin-bottom: 0;
+    cursor: pointer;
+  }
+  .heart-icon {
+    background-image: url(../src/svg/heart.svg);
+  }
+  .comment-icon {
+    background-image: url(../src/svg/comment.svg);
+  }
+  /* #endregion 最下面有个盒子，隐藏的，放的是点赞评论等小控件 */
+/* #endregion文字内容（博客、记录等） */
+
+/* #region右侧电梯栏 */
+  div.lift-container {
+    position: fixed;
+    right: 50px;
+    bottom: 100px;
+    width: 75px;
+    height: 75px;
+    padding: 10px;
+    background-color: #fff0;
+  }
+div.lift-container > div.return-top {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  padding: 8px;
+  text-align: center;
+  background-image: url('../src/svg/retrun-top.svg');
+  background-size: cover;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  border: 2px solid rgba(128, 128, 128, 0.735);
+  border-radius: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+div.lift-container > div.return-top:hover {
+  background-image: none;
+  background-color: #17b978;
+}
+div.return-top:hover::after {
+  content: "置顶";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: -12px;
+  margin-left: -16px;
+  color: rgb(255, 255, 255);
+}
+/* #endregion右侧电梯栏 */
+
+/* #endregion----------内容部分------------------------ */

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 让b站文件可请求 -->
+  <meta name="referrer" content="no-referrer">
+  <link rel="stylesheet" href="./css/clear.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="icon" type="image/png" href="./src/svg/logo.svg">
+  
+  <title>DH's Code</title>
+</head>
+<body>
+  <!-- 背景 -->
+  <div class="background"></div>
+  <!-- 总盒子 -->
+  <div class="root">
+
+    <!-- header -->
+    <header class="header">
+      <!-- 版心内容 -->
+      <div class="header-content">
+        <div class="left">
+          <!-- 头像 -->
+          <div class="profile-photo"></div>
+        </div>
+        <div class="middle"></div>
+        <div class="right"></div>
+      </div>
+    </header>
+
+    <!-- content -->
+    <div class="main-content">
+      <h2>快速浏览</h2>
+      <hr>
+      <!-- 导航条 -->
+      <div class="top-nav">
+        <!-- 几个导航的块 -->
+         <ul class="top-nav-list">
+          <li><a href="https://www.iconfont.cn/" target="_blank">iconfont</a></li>
+          <li><a href="https://www.bilibili.com" target="_blank">哔哩哔哩</a></li>
+          <li><a href="https://uiverse.io/" target="_blank">UI</a></li>
+          <li><a href="https://caniuse.com/" target="_blank">Can I Use?</a></li>
+         </ul>
+      </div>
+
+      <!-- 轮播图 -->
+      <div class="carousel-container">
+        <span class="img"></span>
+        <!-- 左右按钮 -->
+        <div class="carousel-prev">
+          <button class="carousel-prev-btn"></button>
+        </div>
+        <div class="carousel-next">
+          <button class="carousel-next-btn"></button>
+        </div>
+        <!-- 下面的位置显示块 -->
+        <div class="carousel-position">
+          <ul class="carousel-ul">
+            <li class="active">
+              <button class="">
+                <label for=""></label>
+              </button>
+            </li>
+            <li>
+              <button class>
+                <label for=""></label>
+              </button>
+            </li>
+            <li>
+              <button class>
+                <label for=""></label>
+              </button>
+            </li>
+            <li>
+              <button class>
+                <label for=""></label>
+              </button>
+            </li>
+            <li>
+              <button class>
+                <label for=""></label>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>还要做什么？</h2>
+      <hr>
+      <!-- 展示(display) -->
+      <div class="display">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <h2>信息2</h2>
+      <hr>
+      <!-- 整个窗口（博客、记录等） -->
+      <div class="record-set">
+        <!-- 一个record -->
+        <div class="record-container">
+          <!-- 下层的盒子放标题 -->
+          <div class="record-below">
+            <!-- 上层的盒子（放img） -->
+            <div class="record-above background-fit"></div>
+            <!-- above底下有个盒子，放图标和文字、作者的 -->
+            <div class="record-describe">
+              <span class="head-icon background-fit"></span>
+              <div class="title-authod">
+                <div class="record-title bold ellipsis">文本溢出自动省略的方法(像这个div)</div>
+                <div class="record-authod ellipsis">DH</div>
+              </div>
+              
+            </div>
+            <!-- 最下面有个盒子，隐藏的，放的是点赞评论等小控件 -->
+            <div class="record-icons">
+              <div class="record-info">
+                <!-- 喜欢 -->
+                <div class="record-info-icon heart-icon background-fit"></div>
+                <span class="record-info-count">0</span>
+              </div>
+              <div class="record-info">
+                <!-- 评论 -->
+                <div class="record-info-icon comment-icon background-fit"></div>
+                <span class="record-info-count">1w+</span>
+              </div>
+              
+            </div>
+          </div>  
+        </div>
+      </div>
+      
+
+      <!-- 右侧电梯栏 -->
+      <div class="lift-container">
+        <div class="return-top"></div>
+      </div>
+    </div>
+
+
+    <script src="./js/index.js"></script>
+    <!-- footer -->
+    <div class="footer">
+
+    </div>
+  </div>
+</body>
+</html>
