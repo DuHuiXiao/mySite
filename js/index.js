@@ -4,7 +4,7 @@
   //所有的图url
   const carouselUrls = ['https://i0.hdslb.com/bfs/new_dyn/6fccbf578dea4f6b8dfe00eed438d8e3161775300.png',
     'https://i0.hdslb.com/bfs/new_dyn/9105f14135e65089bcf26f613d3944e2161775300.jpg',
-    'http://i0.hdslb.com/bfs/new_dyn/16bc9669405fdae8cf2ed1fba8ea4163161775300.jpg',
+    'https://i0.hdslb.com/bfs/new_dyn/16bc9669405fdae8cf2ed1fba8ea4163161775300.jpg',
     'https://i0.hdslb.com/bfs/new_dyn/404dc1824857a02f75eded8b9cb46f9d161775300.png',
     'https://i0.hdslb.com/bfs/album/cec85059bf0d22d4cc00af565db8f1e56678e04a.png'
   ]
