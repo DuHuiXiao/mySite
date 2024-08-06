@@ -25,14 +25,20 @@
           <!-- 头像 -->
           <div class="profile-photo"></div>
         </div>
-        <div class="middle"></div>
+        <div class="middle">
+          <ul class="header-nav">
+            <li><a href="#area1">快速浏览</a></li>
+            <li><a href="#area2">我的任务</a></li>
+            <li><a href="#area3">我的文档</a></li>
+          </ul>
+        </div>
         <div class="right"></div>
       </div>
     </header>
 
     <!-- content -->
     <div class="main-content">
-      <h2>快速浏览</h2>
+      <h2 id="area1">快速浏览</h2>
       <hr>
       <!-- 导航条 -->
       <div class="top-nav">
@@ -87,7 +93,7 @@
         </div>
       </div>
 
-      <h2>还要做什么？</h2>
+      <h2 id="area2">接下来做什么？</h2>
       <hr>
       <!-- 展示(display) -->
       <div class="display">
@@ -96,7 +102,7 @@
         <div></div>
       </div>
 
-      <h2>信息2</h2>
+      <h2 id="area3">文档的背叛（未完成）</h2>
       <hr>
       <!-- 整个窗口（博客、记录等） -->
       <div class="record-set">
@@ -122,12 +128,12 @@
               <div class="record-info">
                 <!-- 喜欢 -->
                 <div class="record-info-icon heart-icon background-fit"></div>
-                <span class="record-info-count">0</span>
+                <span class="record-info-count heart-count">2</span>
               </div>
               <div class="record-info">
                 <!-- 评论 -->
                 <div class="record-info-icon comment-icon background-fit"></div>
-                <span class="record-info-count">1w+</span>
+                <span class="record-info-count comment-count">0</span>
               </div>
               
             </div>
